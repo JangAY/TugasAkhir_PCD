@@ -1,8 +1,8 @@
 # **Komparasi Metode Noise Salt & Pepper dengan Median Filter dan Adaptive Regularization**
 
-**Nama Penulis**  
-[Institusi Penulis]  
-Email: penulis@example.com  
+**Moch Nazham Ismul Azham , Zamzam Mubarok**
+[Institut Teknologi Garut]  
+Email: 2206096@itg.ac.id , 2206088@itg.ac.id  
 
 ---
 
