@@ -60,6 +60,3 @@ Hasil analisis menunjukkan bahwa metode *adaptive median filter* dengan *edge-pr
 6. Pok, G., Liu, J.-C., & Nair, A. S. (2003). *Selective Removal of Impulse Noise Based on Homogeneity Level Information*. IEEE Transactions on Image Processing, 12(1), 85-92.  
 7. Wang, Z., & Zhang, D. (1999). *Progressive Switching Median Filter for the Removal of Impulse Noise from Highly Corrupted Images*. IEEE Transactions on Circuits and Systems II: Analog and Digital Signal Processing, 46(1), 78-80.  
 
----
-
-Artikel ini sekarang sudah mengikuti standar penulisan jurnal ilmiah dengan tambahan lima referensi yang relevan. Jika Anda ingin menyesuaikan lebih lanjut, silakan beri tahu saya! 😊📄
