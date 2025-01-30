@@ -100,13 +100,14 @@ Median Filter dan Adaptive Median Filter menawarkan pendekatan yang berbeda untu
 Adaptive Median Filter, dengan pendekatan adaptifnya, lebih selektif dalam mengurangi noise, menyesuaikan ukuran kernel berdasarkan karakteristik lokal citra. Hal ini membantu dalam mempertahankan detail halus dan tekstur, menghasilkan MAE yang lebih rendah. Namun, pendekatan ini mungkin kurang efektif dalam mengurangi noise secara keseluruhan dibandingkan dengan Median Filter standar, menghasilkan PSNR yang lebih rendah.
 
 ### 4.2	**Batasan Pekerjaan**
-#### 1.	Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan median filter.
-#### 2.	Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter yang digunakan.
+1.	Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan median filter
+2.	Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter yang digunakan.
 
 ### **4.3	Rekomendasi untuk Pekerjaan di Masa Depan**
-#### 1.	Pengembangan algoritma yang lebih efisien untuk mempercepat waktu komputasi.
-#### 2.	Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise yang lebih adaptif.
+1.	Pengembangan algoritma yang lebih efisien untuk mempercepat waktu komputasi.
+2.	Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise yang lebih adaptif.
  
 ---
+## **5. Referensi**
 
 
