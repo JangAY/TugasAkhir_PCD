@@ -41,23 +41,23 @@ Dengan penelitian ini, diharapkan dapat ditemukan metode yang lebih optimal untu
 ### 2.1 **Penjelasan Langkah-Langkah**
 
  1. **Persiapan Data**
-- Pemilihan gambar *Lena* dan gambar *Bridge* dengan citra grayscale yang digunakan dalam eksperimen.
-- Penambahan noise *salt and pepper* pada citra.
+    - Pemilihan gambar *Lena* dan gambar *Bridge* dengan citra grayscale yang digunakan dalam eksperimen.
+    - Penambahan noise *salt and pepper* pada citra.
 
  2. **Penerapan Filtering**
-- **Metode Median Filter**
-  - Citra yang telah terkontaminasi noise diproses menggunakan *median filter* dengan ukuran jendela tetap (3x3 dan 5x5).
-- **Metode Adaptive Median Filter dan Edge-Preserving Regularization**
-  - Citra diproses dengan *adaptive median filter* untuk mendeteksi dan menghilangkan noise.
-  - Diterapkan *edge-preserving regularization* untuk mempertahankan detail gambar.
+    - **Metode Median Filter**
+     - Citra yang telah terkontaminasi noise diproses menggunakan *median filter* dengan ukuran jendela tetap (3x3 dan 5x5).
+    - **Metode Adaptive Median Filter dan Edge-Preserving Regularization**
+     - Citra diproses dengan *adaptive median filter* untuk mendeteksi dan menghilangkan noise.
+     - Diterapkan *edge-preserving regularization* untuk mempertahankan detail gambar.
 
  3. **Evaluasi Hasil**
-- Pengukuran kualitas citra dilakukan menggunakan metrik *PSNR* dan *MSE*.
-- Analisis visual dilakukan untuk melihat perbedaan hasil filtering noise dengan metode yang berbeda: *Median Filter, Adaptive Median Filter,* dan *Edge-Preserving Regularization*.
-- Menghitung *PSNR* dan *MAE* untuk mengevaluasi kualitas citra yang dipulihkan oleh *AMF* dan *EPR*.
-  - *PSNR* mengukur rasio antara daya sinyal maksimum dan daya noise, dengan nilai yang lebih tinggi menunjukkan kualitas citra yang lebih baik.
-  - *MAE* mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan, dengan nilai yang lebih rendah menunjukkan kualitas citra yang lebih baik.
-- Membandingkan nilai *PSNR* dan *MAE* dari *Median Filter, AMF,* dan *EPR* untuk menentukan metode yang lebih efektif.
+    - Pengukuran kualitas citra dilakukan menggunakan metrik *PSNR* dan *MSE*.
+    - Analisis visual dilakukan untuk melihat perbedaan hasil filtering noise dengan metode yang berbeda: *Median Filter, Adaptive Median Filter,* dan *Edge-Preserving Regularization*.
+    - Menghitung *PSNR* dan *MAE* untuk mengevaluasi kualitas citra yang dipulihkan oleh *AMF* dan *EPR*.
+    - *PSNR* mengukur rasio antara daya sinyal maksimum dan daya noise, dengan nilai yang lebih tinggi menunjukkan kualitas citra yang lebih baik.
+    - *MAE* mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan, dengan nilai yang lebih rendah menunjukkan kualitas citra yang lebih baik.
+    - Membandingkan nilai *PSNR* dan *MAE* dari *Median Filter, AMF,* dan *EPR* untuk menentukan metode yang lebih efektif.
 
 ---
 
@@ -80,12 +80,12 @@ Hasil eksperimen menunjukkan bahwa metode *Median Filter* mendapatkan nilai **PS
 
 ### 3.2 **Analisis Hasil**
 
-1. **PSNR (*Peak Signal-to-Noise Ratio*)**
+ 1. **PSNR (*Peak Signal-to-Noise Ratio*)**
    - *Median Filter* menghasilkan **PSNR** yang lebih tinggi dibandingkan dengan *Adaptive Median Filter*.
    - **PSNR** merupakan metrik yang mengukur rasio antara daya sinyal maksimum dan daya noise. Nilai **PSNR** yang lebih tinggi menunjukkan kualitas citra yang lebih baik, khususnya dalam mengurangi noise.
    - Hal ini menunjukkan bahwa *Median Filter* lebih efektif dalam mengurangi noise secara keseluruhan dan mempertahankan informasi sinyal asli.
 
-3. **MAE (*Mean Absolute Error*)**
+ 2. **MAE (*Mean Absolute Error*)**
    - *Adaptive Median Filter* memiliki nilai **MAE** yang lebih rendah dibandingkan dengan *Median Filter*.
    - **MAE** mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan. Nilai **MAE** yang lebih rendah menunjukkan bahwa citra yang dipulihkan lebih mirip dengan citra asli secara visual.
    - Hal ini menunjukkan bahwa *Adaptive Median Filter* lebih baik dalam mempertahankan detail halus dan tekstur citra, meskipun mungkin tidak seefektif *Median Filter* dalam mengurangi noise secara keseluruhan.
@@ -100,12 +100,12 @@ Median Filter dan Adaptive Median Filter menawarkan pendekatan yang berbeda untu
 Adaptive Median Filter, dengan pendekatan adaptifnya, lebih selektif dalam mengurangi noise, menyesuaikan ukuran kernel berdasarkan karakteristik lokal citra. Hal ini membantu dalam mempertahankan detail halus dan tekstur, menghasilkan MAE yang lebih rendah. Namun, pendekatan ini mungkin kurang efektif dalam mengurangi noise secara keseluruhan dibandingkan dengan Median Filter standar, menghasilkan PSNR yang lebih rendah.
 
 ### 4.2	**Batasan Pekerjaan**
-1.	Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan median filter
-2.	Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter yang digunakan.
+ 1.	Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan median filter
+ 2.	Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter yang digunakan.
 
 ### **4.3	Rekomendasi untuk Pekerjaan di Masa Depan**
-1.	Pengembangan algoritma yang lebih efisien untuk mempercepat waktu komputasi.
-2.	Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise yang lebih adaptif.
+ 1.	Pengembangan algoritma yang lebih efisien untuk mempercepat waktu komputasi.
+ 2.	Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise yang lebih adaptif.
  
 ---
 ## **5. Referensi**
