@@ -71,6 +71,11 @@ Pada metode *Median Filter* terdapat hasil dengan nilai **PSNR** 34,49 dan **MSE
 #### Hasil Metode Adaptive Median Filter
 Pada metode *Adaptive Median Filter* terdapat hasil dengan nilai **PSNR** 15,40 dan nilai **MAE** sebesar 31,73.
 
+| **Metode**               | **PSNR (db)** | **MAE**  |
+|--------------------------|--------------|---------|
+| Median Filter           | 34,49        | 91,06   |
+| Adaptive Median Filter  | 15,40        | 31,73   |
+
 Hasil eksperimen menunjukkan bahwa metode *Median Filter* mendapatkan nilai **PSNR** lebih tinggi dibanding *Adaptive Median Filter*, tetapi nilai **Mean Absolute Error (MAE)** metode *Adaptive Median Filter* lebih kecil, yaitu 31,73 dibandingkan dengan *Median Filter* yang memiliki nilai **MAE** sebesar 91,06.
 
 ### **3.2 Analisis Hasil**
