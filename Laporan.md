@@ -40,18 +40,18 @@ Dengan penelitian ini, diharapkan dapat ditemukan metode yang lebih optimal untu
 
 ### 2.1 **Penjelasan Langkah-Langkah**
 
-#### 1. **Persiapan Data**
+1. **Persiapan Data**
 - Pemilihan gambar *Lena* dan gambar *Bridge* dengan citra grayscale yang digunakan dalam eksperimen.
 - Penambahan noise *salt and pepper* pada citra.
 
-#### 2. **Penerapan Filtering**
+2. **Penerapan Filtering**
 - **Metode Median Filter**
   - Citra yang telah terkontaminasi noise diproses menggunakan *median filter* dengan ukuran jendela tetap (3x3 dan 5x5).
 - **Metode Adaptive Median Filter dan Edge-Preserving Regularization**
   - Citra diproses dengan *adaptive median filter* untuk mendeteksi dan menghilangkan noise.
   - Diterapkan *edge-preserving regularization* untuk mempertahankan detail gambar.
 
-#### 3. **Evaluasi Hasil**
+3. **Evaluasi Hasil**
 - Pengukuran kualitas citra dilakukan menggunakan metrik *PSNR* dan *MSE*.
 - Analisis visual dilakukan untuk melihat perbedaan hasil filtering noise dengan metode yang berbeda: *Median Filter, Adaptive Median Filter,* dan *Edge-Preserving Regularization*.
 - Menghitung *PSNR* dan *MAE* untuk mengevaluasi kualitas citra yang dipulihkan oleh *AMF* dan *EPR*.
@@ -65,10 +65,10 @@ Dengan penelitian ini, diharapkan dapat ditemukan metode yang lebih optimal untu
 
 ### 3.1 **Hasil Eksperimen**
 
-#### **Hasil Metode Median Filter**
+**Hasil Metode Median Filter**
 Pada metode *Median Filter* terdapat hasil dengan nilai **PSNR** 34,49 dan **MSE** 23,09 serta nilai **MAE** mencapai 91,06.
 
-#### **Hasil Metode Adaptive Median Filter**
+**Hasil Metode Adaptive Median Filter**
 Pada metode *Adaptive Median Filter* terdapat hasil dengan nilai **PSNR** 15,40 dan nilai **MAE** sebesar 31,73.
 
 | **Metode**               | **PSNR (db)** | **MAE**  |
@@ -80,15 +80,15 @@ Hasil eksperimen menunjukkan bahwa metode *Median Filter* mendapatkan nilai **PS
 
 ### 3.2 **Analisis Hasil**
 
-#### 1. **PSNR (*Peak Signal-to-Noise Ratio*)**
-1. *Median Filter* menghasilkan **PSNR** yang lebih tinggi dibandingkan dengan *Adaptive Median Filter*.
-2. **PSNR** merupakan metrik yang mengukur rasio antara daya sinyal maksimum dan daya noise. Nilai **PSNR** yang lebih tinggi menunjukkan kualitas citra yang lebih baik, khususnya dalam mengurangi noise.
-3. Hal ini menunjukkan bahwa *Median Filter* lebih efektif dalam mengurangi noise secara keseluruhan dan mempertahankan informasi sinyal asli.
+1. **PSNR (*Peak Signal-to-Noise Ratio*)**
+   - *Median Filter* menghasilkan **PSNR** yang lebih tinggi dibandingkan dengan *Adaptive Median Filter*.
+   - **PSNR** merupakan metrik yang mengukur rasio antara daya sinyal maksimum dan daya noise. Nilai **PSNR** yang lebih tinggi menunjukkan kualitas citra yang lebih baik, khususnya dalam mengurangi noise.
+   - Hal ini menunjukkan bahwa *Median Filter* lebih efektif dalam mengurangi noise secara keseluruhan dan mempertahankan informasi sinyal asli.
 
-#### 2. **MAE (*Mean Absolute Error*)**
-1. *Adaptive Median Filter* memiliki nilai **MAE** yang lebih rendah dibandingkan dengan *Median Filter*.
-2. **MAE** mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan. Nilai **MAE** yang lebih rendah menunjukkan bahwa citra yang dipulihkan lebih mirip dengan citra asli secara visual.
-3. Hal ini menunjukkan bahwa *Adaptive Median Filter* lebih baik dalam mempertahankan detail halus dan tekstur citra, meskipun mungkin tidak seefektif *Median Filter* dalam mengurangi noise secara keseluruhan.
+3. **MAE (*Mean Absolute Error*)**
+   - *Adaptive Median Filter* memiliki nilai **MAE** yang lebih rendah dibandingkan dengan *Median Filter*.
+   - **MAE** mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan. Nilai **MAE** yang lebih rendah menunjukkan bahwa citra yang dipulihkan lebih mirip dengan citra asli secara visual.
+   - Hal ini menunjukkan bahwa *Adaptive Median Filter* lebih baik dalam mempertahankan detail halus dan tekstur citra, meskipun mungkin tidak seefektif *Median Filter* dalam mengurangi noise secara keseluruhan.
 
 ---
 
