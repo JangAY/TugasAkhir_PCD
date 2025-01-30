@@ -40,18 +40,18 @@ Dengan penelitian ini, diharapkan dapat ditemukan metode yang lebih optimal untu
 
 ### 2.1 **Penjelasan Langkah-Langkah**
 
-1. **Persiapan Data**
+###### 1. **Persiapan Data**
 - Pemilihan gambar *Lena* dan gambar *Bridge* dengan citra grayscale yang digunakan dalam eksperimen.
 - Penambahan noise *salt and pepper* pada citra.
 
-2. **Penerapan Filtering**
+###### 2. **Penerapan Filtering**
 - **Metode Median Filter**
   - Citra yang telah terkontaminasi noise diproses menggunakan *median filter* dengan ukuran jendela tetap (3x3 dan 5x5).
 - **Metode Adaptive Median Filter dan Edge-Preserving Regularization**
   - Citra diproses dengan *adaptive median filter* untuk mendeteksi dan menghilangkan noise.
   - Diterapkan *edge-preserving regularization* untuk mempertahankan detail gambar.
 
-3. **Evaluasi Hasil**
+###### 3. **Evaluasi Hasil**
 - Pengukuran kualitas citra dilakukan menggunakan metrik *PSNR* dan *MSE*.
 - Analisis visual dilakukan untuk melihat perbedaan hasil filtering noise dengan metode yang berbeda: *Median Filter, Adaptive Median Filter,* dan *Edge-Preserving Regularization*.
 - Menghitung *PSNR* dan *MAE* untuk mengevaluasi kualitas citra yang dipulihkan oleh *AMF* dan *EPR*.
