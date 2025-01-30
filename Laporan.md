@@ -90,4 +90,23 @@ Hasil eksperimen menunjukkan bahwa metode *Median Filter* mendapatkan nilai **PS
 2. **MAE** mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan. Nilai **MAE** yang lebih rendah menunjukkan bahwa citra yang dipulihkan lebih mirip dengan citra asli secara visual.
 3. Hal ini menunjukkan bahwa *Adaptive Median Filter* lebih baik dalam mempertahankan detail halus dan tekstur citra, meskipun mungkin tidak seefektif *Median Filter* dalam mengurangi noise secara keseluruhan.
 
+---
+
+## 4. Kesimpulan
+
+### **4.1	Ringkasan Temuan**
+Median Filter dan Adaptive Median Filter menawarkan pendekatan yang berbeda untuk pengurangan noise pada citra, masing-masing dengan kelebihan dan kekurangannya sendiri. Median Filter, dengan sifatnya yang non-adaptif, lebih agresif dalam mengurangi noise, menghasilkan PSNR yang lebih tinggi. Namun, hal ini dapat mengakibatkan hilangnya detail halus dan efek "blocky" pada citra, yang tercermin dalam MAE yang lebih tinggi.
+
+Adaptive Median Filter, dengan pendekatan adaptifnya, lebih selektif dalam mengurangi noise, menyesuaikan ukuran kernel berdasarkan karakteristik lokal citra. Hal ini membantu dalam mempertahankan detail halus dan tekstur, menghasilkan MAE yang lebih rendah. Namun, pendekatan ini mungkin kurang efektif dalam mengurangi noise secara keseluruhan dibandingkan dengan Median Filter standar, menghasilkan PSNR yang lebih rendah.
+
+### **4.2	Batasan Pekerjaan**
+#### 1)	Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan median filter.
+#### 2)	Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter yang digunakan.
+
+### **4.3	Rekomendasi untuk Pekerjaan di Masa Depan**
+#### 1)	Pengembangan algoritma yang lebih efisien untuk mempercepat waktu komputasi.
+#### 2)	Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise yang lebih adaptif.
+ 
+
+
 
