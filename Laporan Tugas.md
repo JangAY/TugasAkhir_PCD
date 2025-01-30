@@ -1,277 +1,129 @@
-## PENDAHULUAN
+## 1. PENDAHULUAN
 
-# 1.1 Latar Belakang
+## 1.1 Latar Belakang
 
-```
-Suatu data atau informasi disajikan tidak hanya berupa data teks
-tetapi juga dapat berupa audio, video, dan gambar. Pada zaman sekarang
-informasi sangatlah penting dan diperlukan, begitu juga informasi yang
-terdapat pada citra (Maulana & Andono, 2016).
-```
-```
-Citra digital merupakan bagian penting dalam berbagai aplikasi
-teknologi, termasuk dalam bidang medis, pengenalan wajah, sistem
-keamanan, dan penginderaan jauh. Dalam proses akuisisi, penyimpanan,
-dan transmisi citra, sering kali terjadi gangguan berupa noise yang
-mengakibatkan penurunan kualitas citra.
-```
-```
-Sebuah citra harus memiliki kualitas yang cukup baik untuk
-pemrosesan lebih lanjut. Apabila kualitas citra yang akan diproses tidak
-baik, maka akan berakibat pada kesalahan pemrosesan citra tersebut.
-Kualitas citra ditentukan dari berapa nilai rasio gangguan terhadap citra
-aslinya.Oleh sebab itu citra harus ditingkatkan kualitasnya terlebih dahulu
-sebelum citra akan diolah (Sajati, 2016).
-```
-```
-Perbaikan kualitas diperlukan karena seringkali citra yang dijadikan
-objek pembahasan mempunyai kualitas yang buruk, misalnya citra
-mengalami derau (noise) pada saat pengiriman melalui saluran transmisi,
-citra terlalu terang/gelap, citra kurang tajam, kabur, dan sebagainya (Fauzi,
-2022).
-```
-```
-Keberadaan noise salt and pepper dapat mengganggu analisis citra
-karena menyebabkan distorsi yang signifikan, terutama pada citra yang
-memiliki detail halus dan tekstur kompleks. Oleh karena itu, diperlukan
-metode pemrosesan citra yang efektif untuk menghilangkan noise tanpa
-mengorbankan kualitas visual dan informasi penting dalam citra.
-```
-**1.2 Penelitian atau Teori Terkait**
+Suatu data atau informasi disajikan tidak hanya berupa data teks tetapi juga dapat berupa audio, video, dan gambar. Pada zaman sekarang informasi sangatlah penting dan diperlukan, begitu juga informasi yang terdapat pada citra (Maulana & Andono, 2016). 
 
-```
-Metode median filter merupakan filter non-linear, Dikatakan non-
-linear karena cara bekerja metode ini tidak termasuk dalam kategori
-operasi kovolusi
-```
-```
-Dalam berbagai penelitian, median filter telah terbukti efektif dalam
-menghilangkan noise salt and pepper pada tingkat noise yang rendah hingga
-menengah. Namun, metode ini memiliki keterbatasan dalam menangani
-```
+Citra digital merupakan bagian penting dalam berbagai aplikasi teknologi, termasuk dalam bidang medis, pengenalan wajah, sistem keamanan, dan penginderaan jauh. Dalam proses akuisisi, penyimpanan, dan transmisi citra, sering kali terjadi gangguan berupa noise yang mengakibatkan penurunan kualitas citra. 
 
-```
-noise dengan tingkat yang lebih tinggi, di mana detail gambar cenderung
-ikut terhapus dan menghasilkan citra yang buram. Untuk mengatasi
-keterbatasan ini, beberapa metode baru dikembangkan, seperti adaptive
-median filter, yang dapat menyesuaikan ukuran jendela filtering
-berdasarkan tingkat keparahan noise.
-```
-```
-Metode Adaptive Median Filter adalah metode pengembangan dari
-median filter biasa perbedaan yang menonjol antara dua metode ini adalah
-bahwa besarnya window (jendela) yang ada pada adaptive median filter
-setiap pixel adalah variabel. Variasi ini tergantung pada nilai median dari
-pixel dalam window saat ini. ukuran jendela akan diperluas jika nilai rata-
-rata adalah impuls (Aripin & Hasibuan, 2019).
-```
-```
-Selain itu, metode edge-preserving regularization diperkenalkan
-sebagai teknik tambahan yang memungkinkan pemulihan citra dengan
-mempertahankan tepi dan detail yang penting. Teknik ini bekerja dengan
-mempertahankan perubahan intensitas piksel yang signifikan (seperti tepi
-objek) sambil menghaluskan daerah yang homogen. Kombinasi adaptive
-median filter dan edge-preserving regularization diyakini dapat
-memberikan hasil yang lebih baik dibandingkan metode median filter
-konvensional.
-```
-**1.3 Tujuan Tugas**
+Sebuah citra harus memiliki kualitas yang cukup baik untuk pemrosesan lebih lanjut. Apabila kualitas citra yang akan diproses tidak baik, maka akan berakibat pada kesalahan pemrosesan citra tersebut.Kualitas citra ditentukan dari berapa nilai rasio gangguan terhadap citra aslinya.Oleh sebab itu citra harus ditingkatkan kualitasnya terlebih dahulu sebelum citra akan diolah (Sajati, 2016). 
 
-```
-Penelitian ini bertujuan untuk membandingkan efektivitas metode
-median filter dengan metode kombinasi adaptive median filter dan edge-
-preserving regularization dalam menghilangkan noise salt and pepper.
-Evaluasi dilakukan berdasarkan metrik Mean Square Error (MSE) dan Peak
-Signal-to-Noise Ratio (PSNR), yang digunakan untuk menilai kualitas citra
-yang telah difilter.
-```
-```
-Peak Signal to Noise Ratio (PSNR) sering digunakan sebagai
-parameter pembanding antara citra yang telah dikonstruksi (diberi noise
-atau diberi filter) dengan citra aslinya. PSNR merupakan nilai perbandingan
-antara nilai maksimum warna pada hasil citra filtering dengan kuantitas
-gangguan (noise) yang merupakan akar rata-rata kuadrat nilai kesalahan
-(√MSE). PSNR dinyatakan dengan satuan desibel (dB) (Restima, 2021).
-```
-```
-Dengan penelitian ini, diharapkan dapat ditemukan metode yang
-lebih optimal untuk menangani noise salt and pepper tanpa mengurangi
-kualitas detail citra.
-```
+Perbaikan kualitas diperlukan karena seringkali citra yang dijadikan objek pembahasan mempunyai kualitas yang buruk, misalnya citra mengalami derau (noise) pada saat pengiriman melalui saluran transmisi,citra terlalu terang/gelap, citra kurang tajam, kabur, dan sebagainya (Fauzi,2022). 
 
-## BAB II
+Keberadaan noise salt and pepper dapat mengganggu analisis citra karena menyebabkan distorsi yang signifikan, terutama pada citra yang memiliki detail halus dan tekstur kompleks. Oleh karena itu, diperlukan metode pemrosesan citra yang efektif untuk menghilangkan noise tanpa mengorbankan kualitas visual dan informasi penting dalam citra. 
 
-## METODE PENELITIAN
+## 1.2 Penelitian atau Teori Terkait 
 
-**2.1 Penjelasan Langkah-Langkah**
+Metode median filter merupakan filter non-linear, Dikatakan non-linear karena cara bekerja metode ini tidak termasuk dalam kategori operasi kovolusi 
 
-1. Persiapan Data
+Dalam berbagai penelitian, median filter telah terbukti efektif dalam menghilangkan noise salt and pepper pada tingkat noise yang rendah hingga menengah. Namun, metode ini memiliki keterbatasan dalam menangani 
 
-```
-Pemilihan gambar lena dan gambar bridge dengan citra grayscale
-yang digunakan dalam eksperimen, Penambahan noise salt and pepper pada
-citra
-```
-2. Penerapan Filtering
+noise dengan tingkat yang lebih tinggi, di mana detail gambar cenderung ikut terhapus dan menghasilkan citra yang buram. Untuk mengatasi keterbatasan ini, beberapa metode baru dikembangkan, seperti adaptive median filter, yang dapat menyesuaikan ukuran jendela filtering berdasarkan tingkat keparahan noise. 
 
-```
-Metode Median Filter, Citra yang telah terkontaminasi noise diproses
-menggunakan median filter dengan ukuran jendela tetap (3x3 dan 5x5).
-```
-```
-Metode Adaptive Median Filter dan Edge-Preserving Regularization,
-Citra diproses dengan adaptive median filter untuk mendeteksi dan
-menghilangkan noise, kemudian diterapkan edge-preserving regularization
-untuk mempertahankan detail gambar.
-```
-3. Evaluasi Hasil
+Metode Adaptive Median Filter adalah metode pengembangan dari median filter biasa perbedaan yang menonjol antara dua metode ini adalah bahwa besarnya window (jendela) yang ada pada adaptive median filter setiap pixel adalah variabel. Variasi ini tergantung pada nilai median dari pixel dalam window saat ini. ukuran jendela akan diperluas jika nilai rata-rata adalah impuls (Aripin & Hasibuan, 2019). 
 
-```
-Pengukuran kualitas citra dilakukan menggunakan metrik PSNR dan
-MSE, dan Analisis visual dilakukan untuk melihat perbedaan hasil filtering
-noise dengan metode yang berbeda, Median Filter, Adaptive Median Filter
-dan Edge Preserving Regularization.
-```
-```
-Menghitung PSNR dan MAE untuk mengevaluasi kualitas citra yang
-dipulihkan oleh AMF dan EPR. Kemudian PSNR mengukur rasio antara
-daya sinyal maksimum dan daya noise, dengan nilai yang lebih tinggi
-menunjukkan kualitas citra yang lebih baik. MAE mengukur rata-rata
-perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang
-dipulihkan, dengan nilai yang lebih rendah menunjukkan kualitas citra yang
-lebih baik. Membandingkan nilai PSNR dan MAE dari Median Filter, AMF
-dan EPR untuk menentukan metode yang lebih efektif.
-```
+Selain itu, metode edge-preserving regularization diperkenalkan sebagai teknik tambahan yang memungkinkan pemulihan citra dengan mempertahankan tepi dan detail yang penting. Teknik ini bekerja dengan mempertahankan perubahan intensitas piksel yang signifikan (seperti tepi objek) sambil menghaluskan daerah yang homogen. Kombinasi adaptive median filter dan edge-preserving regularization diyakini dapat memberikan hasil yang lebih baik dibandingkan metode median filter konvensional. 
 
-## BAB III
+1.3 Tujuan Tugas 
 
-## HASIL DAN PEMBAHASAN
+Penelitian ini bertujuan untuk membandingkan efektivitas metode median filter dengan metode kombinasi adaptive median filter dan edge-preserving regularization dalam menghilangkan noise salt and pepper. Evaluasi dilakukan berdasarkan metrik Mean Square Error (MSE) dan Peak Signal-to-Noise Ratio (PSNR), yang digunakan untuk menilai kualitas citra yang telah difilter. 
 
-**3.1 Hasil Eksperimen**
+Peak Signal to Noise Ratio (PSNR) sering digunakan sebagai parameter pembanding antara citra yang telah dikonstruksi (diberi noise atau diberi filter) dengan citra aslinya. PSNR merupakan nilai perbandingan antara nilai maksimum warna pada hasil citra filtering dengan kuantitas gangguan (noise) yang merupakan akar rata-rata kuadrat nilai kesalahan (√MSE). PSNR dinyatakan dengan satuan desibel (dB) (Restima, 2021). 
 
-```
-Gambar 1. 1 Hasil Metode Median Filter
-```
-```
-Pada Metode Median filter terdapat hasil dengan nilai PSNR 3 4 , 49 dan
-MSE 23 ,09 dan nilai MAE nya mencapai 91,
-```
-```
-Gambar 1. 2 Hasil Metode Adaptive Median Filter
-```
-```
-Pada Metode Adaptive Median Filter terdapat hasil dengan nilai PSNR
-15,40 dan Nilai MAE nya 31,
-```
+ Dengan penelitian ini, diharapkan dapat ditemukan metode yang lebih optimal untuk menangani noise salt and pepper tanpa mengurangi kualitas detail citra. 
 
-```
-Metode PSNR (db) MAE
-```
-```
-Median Filter 3 4,49 91,
-```
-```
-Adaptive Median
-Filter
-```
-## 15,40 31,
+## 2. METODE PENELITIAN
 
-```
-Hasil eksperimen menunjukkan bahwa metode Median filter mendapatkan
-nilai psnr lebih tinggi dibanding Adaptive median filter tetapi nilai Mean
-absolute erorr nya metode adaptive median filter lebih kecil nilai nya 31,
-sedangkan median filter memiliki nilai mean absolute error sebesar 91,
-```
-**3.2 Analisis Hasil**
+## 2.1 Penjelasan Langkah-Langkah
 
-**1. PSNR (Peak Signal-to-Noise Ratio):**
-    1) Median Filter menghasilkan PSNR yang lebih tinggi dibandingkan
-       dengan Adaptive Median Filter.
-    2) PSNR merupakan metrik yang mengukur rasio antara daya sinyal
-       maksimum dan daya noise. Nilai PSNR yang lebih tinggi
-       menunjukkan kualitas citra yang lebih baik, khususnya dalam hal
-       mengurangi noise.
-    3) Hal ini menunjukkan bahwa Median Filter lebih efektif dalam
-       mengurangi noise secara keseluruhan dan mempertahankan
-       informasi sinyal asli.
-**2. MAE (Mean Absolute Error):**
-    1) Adaptive Median Filter memiliki nilai MAE yang lebih rendah
-       dibandingkan dengan Median Filter.
-    2) MAE mengukur rata-rata perbedaan absolut antara piksel-piksel
-       dalam citra asli dan citra yang dipulihkan. Nilai MAE yang lebih
+## 1. Persiapan Data 
+
+Pemilihan gambar lena dan gambar bridge dengan citra grayscale yang digunakan dalam eksperimen, Penambahan noise salt and pepper pada citra 
+
+## 2. Penerapan Filtering 
+
+Metode Median Filter, Citra yang telah terkontaminasi noise diproses menggunakan median filter dengan ukuran jendela tetap (3x3 dan 5x5). 
+
+Metode Adaptive Median Filter dan Edge-Preserving Regularization,Citra diproses dengan adaptive median filter untuk mendeteksi dan menghilangkan noise, kemudian diterapkan edge-preserving regularization untuk mempertahankan detail gambar. 
+
+## 3. Evaluasi Hasil 
+
+Pengukuran kualitas citra dilakukan menggunakan metrik PSNR dan MSE, dan Analisis visual dilakukan untuk melihat perbedaan hasil filtering noise dengan metode yang berbeda, Median Filter, Adaptive Median Filter dan Edge Preserving Regularization. 
+
+Menghitung PSNR dan MAE untuk mengevaluasi kualitas citra yang dipulihkan oleh AMF dan EPR. Kemudian PSNR mengukur rasio antara daya sinyal maksimum dan daya noise, dengan nilai yang lebih tinggi menunjukkan kualitas citra yang lebih baik. MAE mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan, dengan nilai yang lebih rendah menunjukkan kualitas citra yang lebih baik. Membandingkan nilai PSNR dan MAE dari Median Filter, AMF dan EPR untuk menentukan metode yang lebih efektif. 
+
+## 3. HASIL DAN PEMBAHASAN
+
+3.1 Hasil Eksperimen
+
+Hasil Metode Median Filter 
+
+Pada Metode Median filter terdapat hasil dengan nilai PSNR 34,49 dan MSE 23,09 dan nilai MAE nya mencapai 91,06 
+
+Hasil Metode Adaptive Median Filter 
+
+ Pada Metode Adaptive Median Filter terdapat hasil dengan nilai PSNR 15,40 dan Nilai MAE nya 31,73 
 
 
-```
-rendah menunjukkan bahwa citra yang dipulihkan lebih mirip
-dengan citra asli secara visual.
-```
-3) Hal ini menunjukkan bahwa Adaptive Median Filter lebih baik
+| Metode  | PSNR (db)  | MAE  |
+| -- | -- | -- |
+| Median Filter  | 34,49  | 91,06  |
+| Adaptive Median Filter  | 15,40  | 31,73  |
 
-```
-dalam mempertahankan detail halus dan tekstur citra, meskipun
-mungkin tidak seefektif Median Filter dalam mengurangi noise
-secara keseluruhan.
-```
 
-## BAB IV
+Hasil eksperimen menunjukkan bahwa metode Median filter mendapatkan nilai psnr lebih tinggi dibanding Adaptive median filter tetapi nilai Mean absolute erorr nya metode adaptive median filter lebih kecil nilai nya 31,73sedangkan median filter memiliki nilai mean absolute error sebesar 91,06 
 
-## KESIMPULAN
+## 3.2 Analisis Hasil 
 
-# 4.1 Ringkasan Temuan
+## 1. PSNR (Peak Signal-to-Noise Ratio): 
 
-```
-Median Filter dan Adaptive Median Filter menawarkan pendekatan yang
-berbeda untuk pengurangan noise pada citra, masing-masing dengan kelebihan
-dan kekurangannya sendiri. Median Filter, dengan sifatnya yang non-adaptif,
-lebih agresif dalam mengurangi noise, menghasilkan PSNR yang lebih tinggi.
-Namun, hal ini dapat mengakibatkan hilangnya detail halus dan efek "blocky"
-pada citra, yang tercermin dalam MAE yang lebih tinggi.
-```
-```
-Adaptive Median Filter, dengan pendekatan adaptifnya, lebih selektif dalam
-mengurangi noise, menyesuaikan ukuran kernel berdasarkan karakteristik lokal
-citra. Hal ini membantu dalam mempertahankan detail halus dan tekstur,
-menghasilkan MAE yang lebih rendah. Namun, pendekatan ini mungkin
-kurang efektif dalam mengurangi noise secara keseluruhan dibandingkan
-dengan Median Filter standar, menghasilkan PSNR yang lebih rendah.
-```
-**4.2 Batasan Pekerjaan**
+1) Median Filter menghasilkan PSNR yang lebih tinggi dibandingkan dengan Adaptive Median Filter. 
 
-```
-1) Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan
-median filter.
-2) Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter
-yang digunakan.
-```
-**4.3 Rekomendasi untuk Pekerjaan di Masa Depan**
+2) PSNR merupakan metrik yang mengukur rasio antara daya sinyal maksimum dan daya noise. Nilai PSNR yang lebih tinggi menunjukkan kualitas citra yang lebih baik, khususnya dalam hal mengurangi noise. 
 
-```
-1) Pengembangan algoritma yang lebih efisien untuk mempercepat waktu
-komputasi.
-2) Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise
-yang lebih adaptif.
-```
+3) Hal ini menunjukkan bahwa Median Filter lebih efektif dalam mengurangi noise secara keseluruhan dan mempertahankan informasi sinyal asli. 
 
-## DAFTAR PUSTAKA
+## 2. MAE (Mean Absolute Error): 
 
-Aripin, S., & Hasibuan, N. A. (2019). Penerapan Metode Interpolasi Linier dan
-Metode Adaptive Median Filter untuk Perbaikan Kualitas Citra pada Hasil
-CCTV. _Prosiding Seminar Nasional Riset Information Science (SENARIS)_ ,
-_1_ (September), 854. https://doi.org/10.30645/senaris.v1i0.
+1) Adaptive Median Filter memiliki nilai MAE yang lebih rendah dibandingkan dengan Median Filter. 
 
-Fauzi, A. (2022). Pengurangan Derau (Noise) pada Citra Paper Dokumen
-menggunakan Metode Gaussian Filter dan Median Filter. _KAKIFIKOM
-(Kumpulan Artikel Karya Ilmiah Fakultas Ilmu Komputer)_ , _04_ (01), 7 – 15.
-https://doi.org/10.54367/kakifikom.v4i1.
+2) MAE mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan. Nilai MAE yang lebih 
 
-Maulana, I., & Andono, P. N. (2016). Analisa Perbandingan Adaptif Median Filter
-Dan Median Filter Dalam Reduksi Noise Salt & Pepper. _CogITo Smart
-Journal_ , _2_ (2), 157–166. https://doi.org/10.31154/cogito.v2i2.26.157- 166
+rendah menunjukkan bahwa citra yang dipulihkan lebih mirip dengan citra asli secara visual. 
 
-Restima. (2021). Implementasi Metode Alpha-Trimmed Mean Filter dan Adaptive
-Median Filter Untuk Mereduksi Noise Poisson Pada Citra Digital. _Terapan
-Informatika Nusantara_ , _1_ (10), 527–535. https://ejurnal.seminar-
-id.com/index.php/tin
+3) Hal ini menunjukkan bahwa Adaptive Median Filter lebih baik dalam mempertahankan detail halus dan tekstur citra, meskipun mungkin tidak seefektif Median Filter dalam mengurangi noise secara keseluruhan. 
 
-Sajati, H. (2016). _Analisis kualitas perbaikan citra m enggunakan m etode m edian
-f il t e r dengan penyeleksian n ila i_. 41–48.
+## 4. KESIMPULAN
+
+## 4.1 Ringkasan Temuan
+
+Median Filter dan Adaptive Median Filter menawarkan pendekatan yang berbeda untuk pengurangan noise pada citra, masing-masing dengan kelebihan dan kekurangannya sendiri. Median Filter, dengan sifatnya yang non-adaptif,lebih agresif dalam mengurangi noise, menghasilkan PSNR yang lebih tinggi.Namun, hal ini dapat mengakibatkan hilangnya detail halus dan efek "blocky" pada citra, yang tercermin dalam MAE yang lebih tinggi. 
+
+Adaptive Median Filter, dengan pendekatan adaptifnya, lebih selektif dalam mengurangi noise, menyesuaikan ukuran kernel berdasarkan karakteristik lokal citra. Hal ini membantu dalam mempertahankan detail halus dan tekstur, menghasilkan MAE yang lebih rendah. Namun, pendekatan ini mungkin kurang efektif dalam mengurangi noise secara keseluruhan dibandingkan dengan Median Filter standar, menghasilkan PSNR yang lebih rendah. 
+
+## 4.2 Batasan Pekerjaan 
+
+1) Waktu pemrosesan metode kombinasi lebih lama dibandingkan dengan median filter. 
+
+2) Efektivitas metode kombinasi dapat bervariasi tergantung pada parameter yang digunakan. 
+
+## 4.3 Rekomendasi untuk Pekerjaan di Masa Depan
+
+1) Pengembangan algoritma yang lebih efisien untuk mempercepat waktu komputasi. 
+
+2) Eksplorasi metode berbasis pembelajaran mesin untuk penghapusan noise yang lebih adaptif. 
+
+### DAFTAR PUSTAKA
+
+Aripin, S., & Hasibuan, N. A. (2019). Penerapan Metode Interpolasi Linier dan Metode Adaptive Median Filter untuk Perbaikan Kualitas Citra pada Hasil CCTV. Prosiding Seminar Nasional Riset Information Science (SENARIS), 1(September), 854. https://doi.org/10.30645/senaris.v1i0.92 
+
+Fauzi, A. (2022). Pengurangan Derau (Noise) pada Citra Paper Dokumen menggunakan Metode Gaussian Filter dan Median Filter. KAKIFIKOM (Kumpulan Artikel Karya Ilmiah Fakultas Ilmu Komputer), 04(01), 7–15. https://doi.org/10.54367/kakifikom.v4i1.1871 
+
+Maulana, I., & Andono, P. N. (2016). Analisa Perbandingan Adaptif Median Filter Dan Median Filter Dalam Reduksi Noise Salt & Pepper. CogITo Smart Journal, 2(2), 157–166. https://doi.org/10.31154/cogito.v2i2.26.157-166 
+
+Restima. (2021). Implementasi Metode Alpha-Trimmed Mean Filter dan Adaptive Median Filter Untuk Mereduksi Noise Poisson Pada Citra Digital. Terapan Informatika Nusantara, 1(10), 527–535. https://ejurnal.seminar-id.com/index.php/tin 
+
+Sajati, H. (2016). Analisis kualitas perbaikan citra m enggunakan m etode m edian f il t e r dengan penyeleksian n ila i. 41–48. 
+
+
+
