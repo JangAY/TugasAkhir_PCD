@@ -61,3 +61,28 @@ Dengan penelitian ini, diharapkan dapat ditemukan metode yang lebih optimal untu
 
 ---
 
+## **3. Hasil dan Pembahasan**
+
+### **3.1 Hasil Eksperimen**
+
+#### Hasil Metode Median Filter
+Pada metode *Median Filter* terdapat hasil dengan nilai **PSNR** 34,49 dan **MSE** 23,09 serta nilai **MAE** mencapai 91,06.
+
+#### Hasil Metode Adaptive Median Filter
+Pada metode *Adaptive Median Filter* terdapat hasil dengan nilai **PSNR** 15,40 dan nilai **MAE** sebesar 31,73.
+
+Hasil eksperimen menunjukkan bahwa metode *Median Filter* mendapatkan nilai **PSNR** lebih tinggi dibanding *Adaptive Median Filter*, tetapi nilai **Mean Absolute Error (MAE)** metode *Adaptive Median Filter* lebih kecil, yaitu 31,73 dibandingkan dengan *Median Filter* yang memiliki nilai **MAE** sebesar 91,06.
+
+### **3.2 Analisis Hasil**
+
+#### 1. PSNR (*Peak Signal-to-Noise Ratio*)
+1. *Median Filter* menghasilkan **PSNR** yang lebih tinggi dibandingkan dengan *Adaptive Median Filter*.
+2. **PSNR** merupakan metrik yang mengukur rasio antara daya sinyal maksimum dan daya noise. Nilai **PSNR** yang lebih tinggi menunjukkan kualitas citra yang lebih baik, khususnya dalam mengurangi noise.
+3. Hal ini menunjukkan bahwa *Median Filter* lebih efektif dalam mengurangi noise secara keseluruhan dan mempertahankan informasi sinyal asli.
+
+#### 2. MAE (*Mean Absolute Error*)
+1. *Adaptive Median Filter* memiliki nilai **MAE** yang lebih rendah dibandingkan dengan *Median Filter*.
+2. **MAE** mengukur rata-rata perbedaan absolut antara piksel-piksel dalam citra asli dan citra yang dipulihkan. Nilai **MAE** yang lebih rendah menunjukkan bahwa citra yang dipulihkan lebih mirip dengan citra asli secara visual.
+3. Hal ini menunjukkan bahwa *Adaptive Median Filter* lebih baik dalam mempertahankan detail halus dan tekstur citra, meskipun mungkin tidak seefektif *Median Filter* dalam mengurangi noise secara keseluruhan.
+
+
