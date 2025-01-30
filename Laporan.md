@@ -109,5 +109,13 @@ Adaptive Median Filter, dengan pendekatan adaptifnya, lebih selektif dalam mengu
  
 ---
 ## **5. Referensi**
+Aripin, S., & Hasibuan, N. A. (2019). Penerapan Metode Interpolasi Linier dan Metode Adaptive Median Filter untuk Perbaikan Kualitas Citra pada Hasil CCTV. Prosiding Seminar Nasional Riset Information Science (SENARIS), 1(September), 854. https://doi.org/10.30645/senaris.v1i0.92 
 
+Fauzi, A. (2022). Pengurangan Derau (Noise) pada Citra Paper Dokumen menggunakan Metode Gaussian Filter dan Median Filter. KAKIFIKOM (Kumpulan Artikel Karya Ilmiah Fakultas Ilmu Komputer), 04(01), 7–15. https://doi.org/10.54367/kakifikom.v4i1.1871 
+
+Maulana, I., & Andono, P. N. (2016). Analisa Perbandingan Adaptif Median Filter Dan Median Filter Dalam Reduksi Noise Salt & Pepper. CogITo Smart Journal, 2(2), 157–166. https://doi.org/10.31154/cogito.v2i2.26.157-166 
+
+Restima. (2021). Implementasi Metode Alpha-Trimmed Mean Filter dan Adaptive Median Filter Untuk Mereduksi Noise Poisson Pada Citra Digital. Terapan Informatika Nusantara, 1(10), 527–535. https://ejurnal.seminar-id.com/index.php/tin 
+
+Sajati, H. (2016). Analisis kualitas perbaikan citra m enggunakan m etode m edian f il t e r dengan penyeleksian n ila i. 41–48.
 
